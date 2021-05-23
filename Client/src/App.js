@@ -15,7 +15,7 @@ function App() {
     // here we should check if a user is logged in from the cookie
 
     useEffect(() => {
-        Axios.get("http://localhost:5000/api/users/auth", {
+        Axios.get("/api/users/auth", {
             withCredentials: true,
         })
             .then((res) => {
@@ -31,11 +31,9 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     const [auth, setAuth] = useState({
-        loggedIn:false,
-        userData:{}
+        loggedIn: false,
+        userData: {},
     });
-
-    
 
     return (
         <Provider store={store}>
