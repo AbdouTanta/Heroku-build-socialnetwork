@@ -52,8 +52,8 @@ app.get("*", (req, res) => {
 });
 
 //listen for requests
-let port = process.env.port || 5000;
-const server = app.listen(process.env.port || 5000, function () {
+let port = process.env.PORT || 5000;
+const server = app.listen(port || 5000, function () {
     console.log("now listening for requests" + ` on port ${port}`);
 });
 
